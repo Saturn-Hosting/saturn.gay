@@ -14,11 +14,19 @@
     color: black;
 }
 
+body {
+    margin: 0;
+    height: 100vh;            
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+}
+
 .rbottom {
     position: fixed;
     display: flex;  
     flex-direction: column; 
-    align-items: flex-end; /* aligns items to the right */
+    align-items: flex-end; 
     right: 20px;      
     bottom: 20px;     
     padding: 10px;
@@ -27,12 +35,12 @@
 }
 
 .rbottom p {
-    margin: 0; /* remove default spacing */
+    margin: 0; 
 }
 
 .rbottom img {
     max-width: 120px;
-    margin-top: -30px; /* pulls the image up */
+    margin-top: -30px; 
 }
 
 
@@ -57,12 +65,67 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0;          /* start with zero width */
-    height: 2px;       /* thickness of underline */
+    width: 0;         
+    height: 2px;      
     background-color: black;
-    transition: width 0.3s ease; /* smooth slide animation */
+    transition: width 0.3s ease; 
 }
 
 .navbar a:hover::after {
-    width: 100%;       /* full width on hover */
+    width: 100%;       
+}
+
+.about-container {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.about-container h1,
+.about-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.about-container h1 {
+    margin-bottom: 10px; 
+    font-size: 45px;
+}
+
+.about-container p {
+    font-size: 20px;
+}
+
+.about-container p + p {
+    margin-top: 5px;
+}
+
+.members {
+    display: flex;
+    gap: 20px;
+}
+
+.members a {
+    text-decoration: none;
+    color: black; 
+    padding: 5px 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.members a::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    border: 2px dashed black;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    border-radius: 5px; 
+}
+
+.members a:hover::before {
+    opacity: 1;
+    transform: scale(1);
 }
