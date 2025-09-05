@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (body.classList.contains('dark-mode')) {
             document.documentElement.style.setProperty('--bg-color', '#000');
             document.documentElement.style.setProperty('--text-color', '#fff');
-            toggleText.textContent = 'DARK';
+            toggleText.textContent = 'LIGHT';
         } else {
             document.documentElement.style.setProperty('--bg-color', '#fff');
             document.documentElement.style.setProperty('--text-color', '#000');
-            toggleText.textContent = 'LIGHT';
+            toggleText.textContent = 'DARK';
         }
     });
 });
