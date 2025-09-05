@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Roboto Mono", monospace;
+    font-display: swap;
+    src: url(../font/robotomono.woff2) format('woff2');
+}
+
+* {
+    font-family: "Roboto Mono", monospace;
+    background-color: #fff;
+    color: black;
+}
+
+.rbottom {
+    position: fixed;   
+    right: 20px;      
+    bottom: 20px;     
+    padding: 10px;
+    user-select: none;
+}
+
+.rbottom img {
+    max-width: 120px;
+    margin-bottom: -30px;
+}
