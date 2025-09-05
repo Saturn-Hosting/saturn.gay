@@ -1,11 +1,10 @@
 @font-face {
-    font-family: "Roboto Mono", monospace;
-    font-display: swap;
-    src: url(../font/robotomono.woff2) format('woff2');
+    font-family: "DIN";
+    src: url(../font/DIN.otf) format('opentype');
 }
 
 * {
-    font-family: "Roboto Mono", monospace;
+    font-family: "DIN", sans-serif;
     background-color: #fff;
     color: black;
 }
@@ -16,6 +15,7 @@
     bottom: 20px;     
     padding: 10px;
     user-select: none;
+    text-align: right;
 }
 
 .rbottom img {
