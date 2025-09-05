@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "RoboMono";
-    src: url(assets/font/robotomono.woff2) format('woff2');
+    src: url(../font/RobotoMono-Light.ttf);
 }
 
 :root {
@@ -19,9 +19,24 @@
 }
 
 * {
-    font-family: "DIN-light", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+body {
+    font-family: "DIN-light", sans-serif;
+}
+
+.mono-font {
+    font-family: "RoboMono", monospace !important;
+}
+
+#fontToggleText.mono-text {
+    font-family: "RoboMono", monospace !important;
+}
+
+#fontToggleText.serif-text {
+    font-family: "DIN-light", sans-serif !important;
 }
 
 .ascii-art {
@@ -103,7 +118,6 @@ body {
 
 .navbar a {
     position: relative; 
-    font-family: "DIN-light", sans-serif;
     font-size: 23px;
     text-decoration: none; 
     color: var(--text-color);
@@ -181,9 +195,17 @@ body {
 
 .theme-switch {
     cursor: pointer;
-    text-decoration: wavy;
+}
+
+.font-switch {
+    cursor: pointer;
 }
 
 body.dark-mode .theme-switch {
     color: var(--text-color);
+}
+
+.switches {
+    display: flex;
+    gap: 15px;
 }
