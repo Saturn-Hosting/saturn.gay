@@ -3,14 +3,22 @@
     src: url(../font/DIN.otf) format('opentype');
 }
 
+@font-face {
+    font-family: "DIN-light";
+    src: url(../font/DIN-light.woff) format('opentype');
+}
+
 * {
-    font-family: "DIN", sans-serif;
+    font-family: "DIN-light", sans-serif;
     background-color: #fff;
     color: black;
 }
 
 .rbottom {
-    position: fixed;   
+    position: fixed;
+    display: flex;  
+    flex-direction: column; 
+    align-items: flex-end; /* aligns items to the right */
     right: 20px;      
     bottom: 20px;     
     padding: 10px;
@@ -18,7 +26,43 @@
     text-align: right;
 }
 
+.rbottom p {
+    margin: 0; /* remove default spacing */
+}
+
 .rbottom img {
     max-width: 120px;
-    margin-bottom: -30px;
+    margin-top: -30px; /* pulls the image up */
+}
+
+
+.navbar {
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    display: flex;
+    gap: 150px;
+}
+
+.navbar a {
+    position: relative; 
+    font-family: "DIN-light", sans-serif;
+    font-size: 23px;
+    text-decoration: none; 
+    color: black;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;          /* start with zero width */
+    height: 2px;       /* thickness of underline */
+    background-color: black;
+    transition: width 0.3s ease; /* smooth slide animation */
+}
+
+.navbar a:hover::after {
+    width: 100%;       /* full width on hover */
 }
