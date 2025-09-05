@@ -13,10 +13,15 @@
     src: url(assets/font/robotomono.woff2) format('woff2');
 }
 
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+}
+
 * {
     font-family: "DIN-light", sans-serif;
-    background-color: #fff;
-    color: black;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .ascii-art {
@@ -27,7 +32,7 @@
     user-select: none;
 
 
-    color: black;
+    color: var(--text-color);
     transition: color 1s ease-in-out;
 }
 
@@ -37,10 +42,10 @@
 
 @keyframes pulseWhite {
     0% {
-        color: black;
+        color: var(--text-color);
     }
     100% {
-        color: white;
+        color: var(--bg-color);
     }
 }
 
@@ -88,7 +93,7 @@ body {
     font-family: "DIN-light", sans-serif;
     font-size: 23px;
     text-decoration: none; 
-    color: black;
+    color: var(--text-color);
 }
 
 .navbar a::after {
@@ -98,7 +103,7 @@ body {
     bottom: 0;
     width: 0;         
     height: 2px;      
-    background-color: black;
+    background-color: var(--text-color);
     transition: width 0.3s ease; 
 }
 
@@ -138,7 +143,7 @@ body {
 
 .members a {
     text-decoration: none;
-    color: black; 
+    color: var(--text-color);; 
     padding: 5px 10px;
     position: relative;
     transition: all 0.3s ease;
@@ -149,7 +154,7 @@ body {
     content: "";
     position: absolute;
     inset: 0; 
-    border: 2px dashed black;
+    border: 2px dashed var(--text-color);
     opacity: 0;
     transform: scale(0.8);
     transition: all 0.3s ease;
@@ -159,4 +164,13 @@ body {
 .members a:hover::before {
     opacity: 1;
     transform: scale(1);
+}
+
+.theme-switch {
+    cursor: pointer;
+    text-decoration: wavy;
+}
+
+body.dark-mode .theme-switch {
+    color: var(--text-color);
 }
