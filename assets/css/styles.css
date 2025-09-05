@@ -8,10 +8,37 @@
     src: url(../font/DIN-light.woff) format('opentype');
 }
 
+@font-face {
+    font-family: "RoboMono";
+    src: url(assets/font/robotomono.woff2) format('woff2');
+}
+
 * {
     font-family: "DIN-light", sans-serif;
     background-color: #fff;
     color: black;
+}
+
+.ascii-art {
+    font-family: "RoboMono", monospace;
+    white-space: pre; 
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 30px;
+    user-select: none;
+}
+
+.ascii-art:hover {
+    animation: pulseWhite 1s infinite alternate;
+}
+
+@keyframes pulseWhite {
+    0% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
 }
 
 body {
@@ -39,7 +66,7 @@ body {
 }
 
 .rbottom img {
-    max-width: 120px;
+    max-width: 60px;
     margin-top: -30px; 
 }
 
