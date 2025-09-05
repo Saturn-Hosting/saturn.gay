@@ -31,14 +31,27 @@
     margin-bottom: 2rem;
     user-select: none;
 
-
     color: var(--text-color);
-    transition: color 1s ease-in-out;
+    transform-origin: center;
+    animation: pulse 4s infinite alternate ease-in-out; /* slower & smooth */
 }
 
-.ascii-art:hover {
-    animation: pulseWhite 1.5s infinite alternate;
+@keyframes pulse {
+    0% {
+        color: var(--text-color);
+        transform: scale(1);
+    }
+    50% {
+        color: var(--bg-color);
+        transform: scale(1.25); /* peak scale and color */
+    }
+    100% {
+        color: var(--text-color);
+        transform: scale(1);
+    }
 }
+
+
 
 @keyframes pulseWhite {
     0% {
